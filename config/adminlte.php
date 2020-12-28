@@ -235,6 +235,14 @@ return [
             'can'  => 'manage-blog',
         ],
         [
+            'text' => 'Profils',
+            'url' => 'profil',
+        ],
+        [
+            'text' => 'Classes',
+            'url' => 'classe',
+        ],
+        [
             'text'        => 'pages',
             'url'         => 'admin/pages',
             'icon'        => 'far fa-fw fa-file',
