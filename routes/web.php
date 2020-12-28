@@ -23,7 +23,6 @@ use App\Http\Controllers\ClasseController;
 
 Auth::routes();
 
-<<<<<<< HEAD
 Route::get('/home', function() {
     return view('home');
 })->name('home')->middleware('auth');
@@ -31,8 +30,6 @@ Route::get('/home', function() {
 
 Route::resource('/profil', UserController::class);
 Route::resource('/classe', ClasseController::class);
-=======
-Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 
 // Publique 
@@ -44,4 +41,3 @@ Route::get('/classe', [PublicController::class, 'index2'])->name('classe');
 
 // Route::get('/forum', [PublicController::class, 'index3'])->name('forum');
 // Route::get('/contact', [PublicController::class, 'index4'])->name('contact');
->>>>>>> 104556b87e8c9429cd6e08bd265346e3c7d29489
