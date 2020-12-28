@@ -28,8 +28,8 @@ Route::get('/home', function() {
 })->name('home')->middleware('auth');
 
 
-Route::resource('/profil', UserController::class);
-Route::resource('/classe', ClasseController::class);
+Route::resource('/profil-admin', UserController::class);
+Route::resource('/classe-admin', ClasseController::class);
 
 
 // Publique 
