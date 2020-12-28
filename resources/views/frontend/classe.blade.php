@@ -2,6 +2,6 @@
 
 @section('content')
     
-    <h1>Bienvenue sur Molenboard</h1>
+    <h1>Classe</h1>
 
 @endsection

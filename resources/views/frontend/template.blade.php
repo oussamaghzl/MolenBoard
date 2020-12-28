@@ -9,7 +9,7 @@
 </head>
 <body>
     
-    @include('components.header')
+    @include('frontend.components.header')
 
     @yield('content')
 
