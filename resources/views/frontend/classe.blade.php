@@ -8,8 +8,8 @@
 
                 <a style="text-decoration:none" href="{{ route("eleves") }}">
 
-                    <div class="cardd cardd-1 mx-auto d-flex justify-content-center" >
-                        <h3>Eleves</h3>
+                    <div class="cardd cardd-1 mx-auto " >
+                        <h3>Eleve</h3>
     
                     </div>
                 </a>
