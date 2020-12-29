@@ -20,7 +20,8 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'role_id'
+        'role_id',
+        'classe_id',
     ];
 
     /**
@@ -44,5 +45,9 @@ class User extends Authenticatable
     protected $table = "users";
     public function roles(){
         return $this->hasMany(Role::class, "role_id", "id");
+    }
+
+    public function classes(){
+        return $this->hasMany(Classe::class, "classe_id", "id");
     }
 }
