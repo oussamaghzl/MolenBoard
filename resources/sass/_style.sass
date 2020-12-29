@@ -1,50 +1,71 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,900)
 
-//colors
-$red: #E1332D
-$white: #fff
-*
-    box-sizing: inherit
-    transition-property: all
-    transition-duration: .6s
-    transition-timing-function: ease
+header
+    
 
 .navbar
-    background-color: white
+    zoom: 75%
+    border-bottom: 5px solid #8D3B90
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22)
+    margin: 15px
     img
-        width: 23%
+        width: 16%
     h3
         margin-top: 1%
         background-color: #8D3B90
         color: white
         font-weight: bolder
-    a
+    .fancy-button__container
+        grid-area: all
+        display: grid
+        grid-template-areas: "center"
+        justify-content: center
+        align-items: center
+        &:hover
+            cursor: pointer
+            .fancy-button__bg-box
+                background-color: white
+                margin: 5px 0 0 -10px
+                transition-timing-function: ease
+                transition-duration: 0.2s
+            .fancy-button
+                background-color: #8437a6
+                margin: 0 -30px -30px 0
+                transition-timing-function: ease
+                transition-duration: 0.2s
+                color: white
+    .fancy-button
+        font-famly: sans-serif
+        transition-duration: 0.2s
+        transition-timing-function: ease
+        grid-area: center
+        height: 60px
+        width: 150px
+        text-transform: uppercase
+        border: none
         font-size: 20px
-    .btn-1
-        background: darken($red, 1.5%)
-        font-weight: 100
+        font-weight: bolder
+        margin: 0px 0 0 -10px
+        box-shadow: 9px 10px 36px -9px rgba(0,0,0,0.75)
+        color: #263547
+        &:hover
+            cursor: pointer
+    .fancy-button__bg-box
+        transition-duration: 0.2s
+        transition-timing-function: ease
+        grid-area: center
+        background-color: #8437a6
+        height: 60px
+        width: 150px
+        margin: 0 -30px -30px 0
+        box-shadow: 9px 10px 36px -9px rgba(0,0,0,0.75)
+    i
+        color: white
+        font-size: 30px
+        padding: 15px
+        border-radius: 50px
+        border: 1px solid #8437a6
+        background-color: #8437a6
 
-        svg
-            height: 45px
-            left: 0
-            position: absolute
-            top: 0
-            width: 100%
-
-        rect
-            fill: none
-            stroke: #fff
-            stroke-width: 2
-            stroke-dasharray: 422, 0
-            transition: all 0.35s linear
-
-    .btn-1:hover
-        background: rgba($red, 0)
-        font-weight: 900
-        letter-spacing: 1px
-
-        rect
-        stroke-width: 5
-        stroke-dasharray: 15, 310
-        stroke-dashoffset: 48
-        transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1)
+        &:hover
+            color: #8437a6
+            background-color: white

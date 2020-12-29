@@ -1,0 +1,129 @@
+#sectionClasse {
+    height: 100vh;
+}
+
+.bubbles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    transform: translateZ(0);
+}
+
+.bubbles li {
+    position: absolute;
+    list-style: none;
+    background-color: rgba(255, 255, 255, 0.15);
+    bottom: -100px;
+    animation: square 15s infinite;
+    transition-timing-function: linear;
+}
+
+.bubbles li:nth-child(1) {
+    width: 40px;
+    height: 40px;
+    left: 20%;
+}
+
+.bubbles li:nth-child(2) {
+    width: 60px;
+    height: 60px;
+    left: 40%;
+    animation-delay: 2s;
+    animation-duration: 17s;
+}
+
+.bubbles li:nth-child(3) {
+    width: 10px;
+    height: 10px;
+    left: 60%;
+    animation-delay: 4s;
+    animation-duration: 13s;
+}
+
+.bubbles li:nth-child(4) {
+    width: 80px;
+    height: 80px;
+    left: 80%;
+    animation-delay: 1s;
+    animation-duration: 22s;
+}
+
+.bubbles li:nth-child(4) {
+    width: 50px;
+    height: 50px;
+    left: 50%;
+    animation-delay: 7s;
+    animation-duration: 12s;
+}
+
+@keyframes square {
+    0% {
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-1080px) rotate(630deg);
+        -webkit-transform: translateY(-1080px) rotate(630deg);
+    }
+}
+
+#titre {
+    @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+    animation: pulse 5s infinite;
+    animation-direction: alternate-reverse;
+    transition: 2s ease-in-out;
+    overflow: hidden;
+    padding: 20px 0px;
+
+    
+}
+
+@keyframes pulse {
+    16.6% {
+        background: #913D88;
+    }
+
+    33.2% {
+        background: #BF55EC;
+    }
+
+    49.8% {
+        background: #8E44AD;
+    }
+
+    66.4% {
+        background: #446CB3;
+    }
+
+    83% {
+        background: #4183D7;
+    }
+
+    100% {
+        background: #913D88;
+    }
+}
+
+h1 {
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-weight: 600;
+    font-family: 'Source Code Pro', monospace;
+    color: aliceblue;
+    position: absolute;
+    font-size: 80px;
+    text-align: right;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    transition: 1s;
+}
+
+h1:hover {
+    color: #95a5a6;
+}

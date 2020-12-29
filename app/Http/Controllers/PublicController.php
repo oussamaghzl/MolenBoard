@@ -14,5 +14,17 @@ class PublicController extends Controller
     {
         return view('frontend.classe');
     }
+    public function index21()
+    {
+        return view('frontend.section.Eleve');
+    }
+    public function index22()
+    {
+        return view('frontend.section.Calendar');
+    }
+    public function index23()
+    {
+        return view('frontend.section.Exercice');
+    }
 
 }

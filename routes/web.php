@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\RoleController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PublicController;
 use Illuminate\Support\Facades\Auth;
@@ -20,12 +21,16 @@ use App\Http\Controllers\ClasseController;
 
 
 
+Route::get('/home', [HomeController::class,'index'])->name('home');
+
+// Route::get('/admin/roles',[RoleController::class,'index']);
+
+Route::resource('admin',RoleController::class);
+
 
 Auth::routes();
 
-Route::get('/home', function() {
-    return view('home');
-})->name('home')->middleware('auth');
+
 
 
 Route::resource('/profil-admin', UserController::class);
@@ -36,6 +41,10 @@ Route::resource('/classe-admin', ClasseController::class);
 
 Route::get('/', [PublicController::class, 'index'])->name('accueil');
 Route::get('/classe', [PublicController::class, 'index2'])->name('classe');
+// Classe
+Route::get('/eleves', [PublicController::class, 'index21'])->name('eleves');
+Route::get('/agenda', [PublicController::class, 'index22'])->name('agenda');
+Route::get('/exercice', [PublicController::class, 'index23'])->name('exercice');
 
 
 

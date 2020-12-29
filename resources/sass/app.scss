@@ -12,3 +12,9 @@
 @import '_style.sass';
 
 @import '_classe.sass';
+
+@import '_classetitre.scss';
+
+body{
+    overflow-y: hidden;
+}

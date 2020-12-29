@@ -235,6 +235,10 @@ return [
             'can'  => 'manage-blog',
         ],
         [
+            'text'=> 'Roles',
+            'url'=> '/admin',
+        ],
+        [
             'text' => 'Profils',
             'url' => 'profil',
         ],
