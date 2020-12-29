@@ -11,30 +11,29 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav col-4">
-              <div class=" hover1 mx-3">
-                <div class="buttons">
-    
-                    <a href="" class="btn btn-1">
-                      <svg>
-                        <rect x="0" y="0" fill="none" width="100%" height="100%"/>
-                      </svg>
-                     Hover
-                    </a>
-                    
-                </div>
-              </div>
 
-              <div class="mx-3">
-                  <a class="nav-item nav-link active" href="{{ route("classe") }}">Classe</span></a>
-              </div>
+            <div class="fancy-button__container mx-4">
+              <div class="fancy-button__bg-box"></div>
+              <button class="fancy-button">Acceuil</button>
+            </div> 
 
-              <div class="mx-3">
-                  <a class="nav-item nav-link active" href="{{ route("accueil") }}">Forum</span></a>
-              </div>
+            <div class="fancy-button__container mx-4">
+              <div class="fancy-button__bg-box"></div>
+              <button class="fancy-button">Classe</button>
+            </div> 
 
-              <div class="mx-3">
-                  <a class="nav-item nav-link active" href="{{ route("accueil") }}">Contact</span></a>
-              </div>
+            <div class="fancy-button__container mx-4">
+              <div class="fancy-button__bg-box"></div>
+              <button class="fancy-button">Forum</button>
+            </div> 
+
+            <div class="fancy-button__container mx-4">
+              <div class="fancy-button__bg-box"></div>
+              <button class="fancy-button">Contact</button>
+            </div>
+            <div>
+              <i class="fas fa-user-alt"></i>
+            </div>
           </div>
         </div>
       </nav>

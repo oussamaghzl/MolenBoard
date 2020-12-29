@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,900);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
 
 /*!
  * Bootstrap v4.5.3 (https://getbootstrap.com/)
@@ -10903,19 +10903,14 @@ a.text-dark:focus {
   }
 }
 
-* {
-  box-sizing: inherit;
-  transition-property: all;
-  transition-duration: 0.6s;
-  transition-timing-function: ease;
-}
-
 .navbar {
-  background-color: white;
+  border-bottom: 5px solid #8D3B90;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  margin: 15px;
 }
 
 .navbar img {
-  width: 23%;
+  width: 16%;
 }
 
 .navbar h3 {
@@ -10925,38 +10920,61 @@ a.text-dark:focus {
   font-weight: bolder;
 }
 
-.navbar a {
+.navbar .fancy-button__container {
+  grid-area: all;
+  display: grid;
+  grid-template-areas: "center";
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar .fancy-button__container:hover {
+  cursor: pointer;
+}
+
+.navbar .fancy-button__container:hover .fancy-button__bg-box {
+  background-color: white;
+  margin: 10px 0 0 -10px;
+  transition-timing-function: ease;
+  transition-duration: 0.2s;
+}
+
+.navbar .fancy-button__container:hover .fancy-button {
+  background-color: #8437a6;
+  margin: 0 -30px -30px 0;
+  transition-timing-function: ease;
+  transition-duration: 0.2s;
+  color: white;
+}
+
+.navbar .fancy-button {
+  font-famly: sans-serif;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+  grid-area: center;
+  height: 40px;
+  width: 130px;
+  text-transform: uppercase;
+  border: none;
   font-size: 20px;
+  font-weight: bolder;
+  margin: 10px 0 0 -10px;
+  box-shadow: 9px 10px 36px -9px rgba(0, 0, 0, 0.75);
+  color: #263547;
 }
 
-.navbar .btn-1 {
-  background: #e02c26;
-  font-weight: 100;
+.navbar .fancy-button:hover {
+  cursor: pointer;
 }
 
-.navbar .btn-1 svg {
-  height: 45px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-
-.navbar .btn-1 rect {
-  fill: none;
-  stroke: #fff;
-  stroke-width: 2;
-  stroke-dasharray: 422, 0;
-  transition: all 0.35s linear;
-}
-
-.navbar .btn-1:hover {
-  background: rgba(225, 51, 45, 0);
-  font-weight: 900;
-  letter-spacing: 1px;
-  stroke-width: 5;
-  stroke-dasharray: 15, 310;
-  stroke-dashoffset: 48;
-  transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+.navbar .fancy-button__bg-box {
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+  grid-area: center;
+  background-color: #8437a6;
+  height: 40px;
+  width: 130px;
+  margin: 0 -30px -30px 0;
+  box-shadow: 9px 10px 36px -9px rgba(0, 0, 0, 0.75);
 }
 
