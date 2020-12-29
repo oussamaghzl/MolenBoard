@@ -235,18 +235,16 @@ return [
             'can'  => 'manage-blog',
         ],
         [
-<<<<<<< HEAD
             'text'=> 'Roles',
             'url'=> '/admin',
-
-=======
+        ],
+        [
             'text' => 'Profils',
             'url' => 'profil',
         ],
         [
             'text' => 'Classes',
             'url' => 'classe',
->>>>>>> e0a1446b6562f07f8e379015efb938827f4d8efa
         ],
         [
             'text'        => 'pages',
