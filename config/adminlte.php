@@ -235,6 +235,11 @@ return [
             'can'  => 'manage-blog',
         ],
         [
+            'text'=> 'Roles',
+            'url'=> '/admin',
+
+        ],
+        [
             'text'        => 'pages',
             'url'         => 'admin/pages',
             'icon'        => 'far fa-fw fa-file',
