@@ -2,6 +2,6 @@
 
 @section('content')
     
-    <h1>Classe</h1>
+    <h1>Classes</h1>
 
 @endsection
