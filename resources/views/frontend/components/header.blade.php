@@ -14,7 +14,7 @@
 
             <div class="fancy-button__container mx-4">
               <div class="fancy-button__bg-box"></div>
-              <button class="fancy-button">Acceuil</button>
+              <a class="fancy-button">Acceuil</a>
             </div> 
 
             <div class="fancy-button__container mx-4">
