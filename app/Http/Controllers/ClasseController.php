@@ -14,7 +14,7 @@ class ClasseController extends Controller
      */
     public function index()
     {
-        return view('backend.classe');
+        
     }
 
     /**
@@ -24,7 +24,8 @@ class ClasseController extends Controller
      */
     public function create()
     {
-        //
+        $datas = Classe::all();
+        return view('backend.classe-admin', compact('datas'));
     }
 
     /**
@@ -35,7 +36,12 @@ class ClasseController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $store = new Classe;
+
+        $store->classe = $request->nom;
+
+        $store->save();
+        return redirect()->back();
     }
 
     /**
@@ -55,9 +61,10 @@ class ClasseController extends Controller
      * @param  \App\Models\Classe  $classe
      * @return \Illuminate\Http\Response
      */
-    public function edit(Classe $classe)
+    public function edit($classe)
     {
-        //
+        $datas = Classe::find($classe);
+        return view('backend.classe-edit-admin', compact('datas'));
     }
 
     /**
@@ -67,9 +74,14 @@ class ClasseController extends Controller
      * @param  \App\Models\Classe  $classe
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Classe $classe)
+    public function update(Request $request,$classe)
     {
-        //
+        $update = Classe::find($classe);
+
+        $update->classe = $request->classe;
+
+        $update->save();
+        return redirect('/classe/create');
     }
 
     /**
@@ -78,8 +90,11 @@ class ClasseController extends Controller
      * @param  \App\Models\Classe  $classe
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Classe $classe)
+    public function destroy($classe)
     {
-        //
+        $destroy = Classe::find($classe);
+        $destroy->delete();
+
+        return redirect()->back();
     }
 }
