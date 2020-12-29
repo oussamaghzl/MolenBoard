@@ -1,9 +1,12 @@
 <?php
 
+use App\Http\Controllers\RoleController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PublicController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\ClasseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,10 +21,20 @@ use Illuminate\Support\Facades\Route;
 
 
 
+Route::get('/home', [HomeController::class,'index'])->name('home');
+
+// Route::get('/admin/roles',[RoleController::class,'index']);
+
+Route::resource('admin',RoleController::class);
+
 
 Auth::routes();
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+
+
+Route::resource('/profil', UserController::class);
+Route::resource('/classe', ClasseController::class);
 
 
 // Publique 
