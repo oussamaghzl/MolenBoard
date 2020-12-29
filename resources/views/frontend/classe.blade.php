@@ -8,14 +8,14 @@
 
                 <a style="text-decoration:none" href="{{ route("eleves") }}">
 
-                    <div class="card card-1 mx-auto d-flex justify-content-center" >
+                    <div class="cardd cardd-1 mx-auto d-flex justify-content-center" >
                         <h3>Eleves</h3>
     
                     </div>
                 </a>
 
                 <a style="text-decoration:none" href="{{ route("agenda") }}">
-                    <div class="card card-1 mx-auto d-flex justify-content-center">
+                    <div class="cardd cardd-1 mx-auto d-flex justify-content-center">
                         <h3 >Agenda</h3>
     
                     </div>
@@ -23,7 +23,7 @@
                 </a>
 
                 <a style="text-decoration:none" href="{{ route("exercice") }}" >
-                    <div class="card card-1 mx-auto d-flex justify-content-center">
+                    <div class="cardd cardd-1 mx-auto d-flex justify-content-center">
                         <h3>Exercice</h3>
                     </div>
 
@@ -46,7 +46,7 @@
                     <li></li>
                     <li></li>
                     <ul>
-                    <h1 class="bg-none">Bienvenue Oussama</h1>                
+                    <h1 class="bg-none" id="titree">Bienvenue Oussama</h1>                
             
                 
             

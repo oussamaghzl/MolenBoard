@@ -8,14 +8,14 @@
 
                 <a style="text-decoration:none" href="{{ route("eleves") }}">
 
-                    <div class="card titre card-1 mx-auto d-flex justify-content-center" >
+                    <div class="cardd titre cardd-1 mx-auto d-flex justify-content-center" >
                         <h3>Eleves</h3>
     
                     </div>
                 </a>
 
                 <a style="text-decoration:none" href="{{ route("agenda") }}">
-                    <div class="card card-1 mx-auto d-flex justify-content-center">
+                    <div class="cardd cardd-1 mx-auto d-flex justify-content-center">
                         <h3 >Agenda</h3>
     
                     </div>
@@ -23,7 +23,7 @@
                 </a>
 
                 <a style="text-decoration:none" href="{{ route("exercice") }}" >
-                    <div id="titre"  class="card card-1 mx-auto d-flex justify-content-center">
+                    <div id="titre"  class="cardd cardd-1 mx-auto d-flex justify-content-center">
                         <h3>Exercice</h3>
                     </div>
 
@@ -38,12 +38,12 @@
             
             <section class="border mr-3"  id="classe">
 
-            </section>
-                             
-                               
-            
+
+
+
                 
-            
+            </section>
+              
         </div>
 
     </div>

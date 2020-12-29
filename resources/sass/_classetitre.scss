@@ -1,5 +1,24 @@
 #sectionClasse {
     height: 100vh;
+    #titree {
+        text-transform: uppercase;
+        letter-spacing: 10px;
+        font-weight: 600;
+        font-family: 'Source Code Pro', monospace;
+        color: aliceblue;
+        position: absolute;
+        font-size: 80px;
+        text-align: right;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 10px;
+        transition: 1s;
+    }
+    
+    #titree:hover {
+        color: #95a5a6;
+    }
 }
 
 .bubbles {
@@ -32,7 +51,7 @@
     height: 60px;
     left: 40%;
     animation-delay: 2s;
-    animation-duration: 17s;
+    animation-duration: 2s;
 }
 
 .bubbles li:nth-child(3) {
@@ -40,7 +59,7 @@
     height: 10px;
     left: 60%;
     animation-delay: 4s;
-    animation-duration: 13s;
+    animation-duration: 3s;
 }
 
 .bubbles li:nth-child(4) {
@@ -48,7 +67,7 @@
     height: 80px;
     left: 80%;
     animation-delay: 1s;
-    animation-duration: 22s;
+    animation-duration: 2s;
 }
 
 .bubbles li:nth-child(4) {
@@ -56,7 +75,7 @@
     height: 50px;
     left: 50%;
     animation-delay: 7s;
-    animation-duration: 12s;
+    animation-duration: 8s;
 }
 
 @keyframes square {
@@ -108,22 +127,4 @@
     }
 }
 
-h1 {
-    text-transform: uppercase;
-    letter-spacing: 10px;
-    font-weight: 600;
-    font-family: 'Source Code Pro', monospace;
-    color: aliceblue;
-    position: absolute;
-    font-size: 80px;
-    text-align: right;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 10px;
-    transition: 1s;
-}
 
-h1:hover {
-    color: #95a5a6;
-}
