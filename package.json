@@ -40,5 +40,9 @@
   "bugs": {
     "url": "https://github.com/oussamaghzl/MolenBoard/issues"
   },
-  "homepage": "https://github.com/oussamaghzl/MolenBoard#readme"
+  "homepage": "https://github.com/oussamaghzl/MolenBoard#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
+    "font-awesome": "^4.7.0"
+  }
 }
