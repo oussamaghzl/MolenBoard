@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Exercice;
+use App\Models\Classe;
 use Illuminate\Http\Request;
+
 
 class ExerciceController extends Controller
 {
@@ -14,7 +16,9 @@ class ExerciceController extends Controller
      */
     public function index()
     {
-        //
+        $classe = Classe::all();
+        $exo = Exercice::all();
+        return view('backend.exercice-admin', compact('exo', 'classe'));
     }
 
     /**
@@ -35,7 +39,16 @@ class ExerciceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $store = new Exercice;
+
+        $store->nom = $request->nom;
+        $store->classe_id = $request->classe;
+        $store->fichier = $request->file('fichier')->hashName();
+        $store->save();
+        $request->file('fichier')->storePublicly('fichier', 'public');
+        
+
+        return redirect()->back();
     }
 
     /**
@@ -81,5 +94,11 @@ class ExerciceController extends Controller
     public function destroy(Exercice $exercice)
     {
         //
+    }
+
+    public function download($id)
+    {
+        $download = Exercice::find($id);
+        return Storage::disk('public')->download('fichier'.$download->fichier);
     }
 }

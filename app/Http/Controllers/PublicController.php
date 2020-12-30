@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use App\Models\Exercice;
 
 class PublicController extends Controller
 {
@@ -26,7 +27,8 @@ class PublicController extends Controller
     }
     public function index23()
     {
-        return view('frontend.section.Exercice');
+        $datas = Exercice::all();
+        return view('frontend.section.Exercice', compact('datas'));
     }
     public function index4()
     {

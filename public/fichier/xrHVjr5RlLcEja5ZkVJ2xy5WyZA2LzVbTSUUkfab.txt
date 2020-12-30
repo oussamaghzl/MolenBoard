@@ -1,0 +1,37 @@
+## Exercice 
+
+> Créez un dossier ReactJS qui s'appelle "exercice1".
+> Supprimez tous les dossiers inutiles.
+> Dans le fichier App.js, supprimez tous et créer une class App avec les extends et imports nécessaires.
+> Retournez un titre principal avec "Bonjour à tous".
+
+## Exercice
+
+> Créez un dossier ReactJS qui s'appelle "exercice2".
+> Supprimez tous les dossiers inutiles.
+> Dans le fichier App.js, supprimez tous et créer une class App avec les extends et imports nécessaires.
+> Créez une variable avec une valeur et mettez cette variable dans le titre principal
+
+## Exercice 
+
+> Créez un dossier ReactJS qui s'appelle "exercice3".
+> Supprimez tous les dossiers inutiles.
+> Dans le fichier App.js, supprimez tous et créer une class App avec les extends et imports nécessaires.
+> Créez une variable qui a comme valeur la date actuelle, et affichez-la dans votre page (Affichez la date, le mois, l'année et l'heure actuelles)
+
+## Exercice
+
+> Créez un dossier ReactJS qui s'appelle "exercice4".
+> Supprimez tous les dossiers inutiles.
+> Dans le fichier App.js, supprimez tous et créer une class App avec les extends et imports nécessaires.
+> Vous allez ajouter bootstrap et fontawesome dans votre exercice
+> Vérifiez qu'il fonctionne bien dans votre exercice
+
+
+## Exercice 
+
+> Créez un dossier ReactJS qui s'appelle "exercice5".
+> Supprimez tous les dossiers inutiles.
+> Dans le fichier App.js, supprimez tous et créer une class App avec les extends et imports nécessaires.
+> Créez un nouveau fichiers appelé Header.js
+> Dans ce fichier header, vous allez créer une barre de navigation en JSX et l'importer dans votre fichier App.js

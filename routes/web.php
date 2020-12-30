@@ -11,6 +11,7 @@ use App\Http\Controllers\MailController;
 use App\Http\Controllers\ForumController;
 use App\Http\Controllers\ForumQuestionController;
 use App\Http\Controllers\ForumReponseController;
+use App\Http\Controllers\ExerciceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,6 +38,9 @@ Auth::routes();
 
 Route::resource('/profil-admin', UserController::class);
 Route::resource('/classe-admin', ClasseController::class);
+Route::resource('/exercice-admin', ExerciceController::class);
+
+Route::post('/exercice/{id}/download', [ExerciceController::class, 'download']);
 
 
 // Publique 

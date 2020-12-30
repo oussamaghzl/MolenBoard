@@ -247,6 +247,10 @@ return [
             'url' => 'classe-admin/create',
         ],
         [
+            'text' => 'Exercices',
+            'url' => 'exercice-admin',
+        ],
+        [
             'text'        => 'pages',
             'url'         => 'admin/pages',
             'icon'        => 'far fa-fw fa-file',

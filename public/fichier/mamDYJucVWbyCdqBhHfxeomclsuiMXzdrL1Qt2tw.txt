@@ -1,0 +1,21 @@
+## Exercice
+
+> Créez un dossier ReactJS qui s'appelle "exercice6".
+> Supprimez tous les dossiers inutiles.
+> Dans le fichier App.js, supprimez tous et créer une class App avec les extends et imports nécessaires.
+> Créez un composant Header dans lequel vous allez mettre une barre de navigation, un composant Contenu dans lequel vous allez mettre un row avec quelques colonnes, et un composant Footer avec un footer bootstrap
+
+## Exercice
+
+> Vous allez modifier le nom du fichier Contenu par Section, et vous allez devoir changer le nom des imports ainsi que des class.
+> Vous allez faire la même chose avec les deux autres composants.
+
+## Exercice
+
+> Encore dans l'exercice 6, vous allez dans le composant où se trouve la barre de navigation, et vous allez créer des évènements.
+> Pour les élements qu'il y a dans la barre de navigation, à chaque fois que je clique sur les élements, il doit me m'afficher un message dans la barre de navigation comme "J'ai été cliqué x fois".
+
+## Exercice
+
+> Encore dans l'exercice 6 dans le composant où se trouve votre barre de navigation, vous allez personnaliser les évenements.
+> Quand je clique sur un element de la barre de navigation il faut qu'il affiche le nom de l'element dans la console.

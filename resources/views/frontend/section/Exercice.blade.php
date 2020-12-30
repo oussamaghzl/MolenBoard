@@ -44,40 +44,29 @@
                 </h2>
                 <section class="scroll-container" id="mise-en-page">
                    
-              
+              @foreach($datas as $element)
                     <article class="post">
                         <div class="post-content">
                             <div class="row text-center">
                                 <div class="col-6">
-                                    <h3 class="post-title">Exercice Laravel</h3>
+                                    <h3 class="post-title">Exercice {{$element->nom}}</h3>
         
                                 </div>
                                 <div class="col-6">
-                                    <button type="button" style="max-width: max-content" class="btn btn-block text-white btn-success">
+                                <form action="/exercice/{{$element->id}}/download" method="post">
+                                    @csrf
+                                        <button type="submit" style="max-width: max-content" class="btn btn-block text-white btn-success">
                                         Download
                                         </button> 
+                                    </form>
+                                    
                                 </div>
                             </div>
                                                 
                          </div>
                    </article>
-              
-                   <article class="post">
-                    <div class="post-content">
-                        <div class="row text-center">
-                            <div class="col-6">
-                                <h3 class="post-title">Exercice Laravel</h3>
-    
-                            </div>
-                            <div class="col-6">
-                                <button type="button" style="max-width: max-content" class="btn btn-block text-white btn-success">
-                                    Download
-                                    </button> 
-                            </div>
-                        </div>
-                                            
-                     </div>
-               </article>
+              @endforeach
+                   
               </section>
 
 
