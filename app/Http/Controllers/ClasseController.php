@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Classe;
 use Illuminate\Http\Request;
 
@@ -50,9 +51,11 @@ class ClasseController extends Controller
      * @param  \App\Models\Classe  $classe
      * @return \Illuminate\Http\Response
      */
-    public function show(Classe $classe)
+    public function show($classe)
     {
-        //
+        $eleve = User::all();
+        $datas = Classe::find($classe);
+        return view('backend.classe-show', compact('datas', 'eleve'));
     }
 
     /**

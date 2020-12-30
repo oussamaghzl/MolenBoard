@@ -9,7 +9,7 @@
     <form action="/classe" method="post" class="m-5">
     @csrf
         
-        <h3>Nom du projet :</h3>
+        <h3>Nom de la classe :</h3>
         <input type="text" name="nom" placeholder="nom" style="width: 400px">
         <br>
         <button type="submit" class="mt-3 btn btn-success">Ajouter</button>
@@ -22,6 +22,7 @@
               <tr>
                 <th scope="col">#</th>
                 <th scope="col">Classe</th>
+                <th scope="col"></th>
                 <th scope="col">action</th>
                 <th scope="col"></th>
               </tr>
@@ -30,6 +31,11 @@
               @foreach ($datas as $elem)
                     <th scope="row">{{$elem->id}}</th>
                           <td>{{$elem->classe}}</td>
+                          <td>
+                            <a href="/classe/{{$elem->id}}">
+                              <button type="submit" class="btn btn-primary">Voir</button>
+                          </a>
+                        </td>
                           <td>
                             <a href="/classe/{{$elem->id}}/edit">
                                 <button type="submit" class="btn btn-success">Editer</button>
@@ -40,6 +46,7 @@
                             @method('delete')
                             <button type="submit" class="btn btn-danger">Delete</button>
                           </form></td>
+                
                         </tbody>
                         @endforeach
                       </table>
