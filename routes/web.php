@@ -48,3 +48,4 @@ Route::get('/exercice', [PublicController::class, 'index23'])->name('exercice');
 
 // Route::get('/forum', [PublicController::class, 'index3'])->name('forum');
 Route::get('/contact', [PublicController::class, 'index4'])->name('contact');
+Route::get('/profil', [PublicController::class, 'index5'])->name('profil');

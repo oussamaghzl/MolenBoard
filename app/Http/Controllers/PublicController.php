@@ -30,5 +30,8 @@ class PublicController extends Controller
     {
         return view('frontend.contact');
     }
-
+    public function index5()
+    {
+        return view('frontend.profil');
+    }
 }

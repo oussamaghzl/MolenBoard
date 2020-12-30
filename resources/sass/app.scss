@@ -15,10 +15,13 @@
 
 @import '_classetitre.scss';
 
+@import '_profil.scss';
+
 //footer
 @import "_footer.scss";
 
 //body
 body {
     overflow: hidden;
+    zoom: 80%;
 }

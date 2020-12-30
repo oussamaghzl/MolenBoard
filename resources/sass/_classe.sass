@@ -15,10 +15,24 @@ h3
     position: relative
     width: 200px
     background-color: white
-    
+
     &-1
         box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
         transition: all 5s cubic-bezier(.15,.8,.25,1)
 
     &-1:hover
         box-shadow: 0 14px 28px  rgba(0,0,0,0.12), 0 10px 10px rgba(0,0,0,0.22)
+
+.scroll-container
+    display: block
+    width: 90%
+    height: 90%
+    overflow-y: scroll
+    scroll-behavior: smooth
+
+.scroll-page
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 100%
+    font-size: 5em

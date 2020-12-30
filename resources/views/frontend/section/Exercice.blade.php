@@ -35,10 +35,50 @@
         </div>
 
         <div class="col-10 mt-4">
-            
-            <section class="border mr-3"  id="classe">
 
 
+
+            <section  class="border mr-3"  id="classe">
+                <h2 class="block-title text-center py-3">
+                    Exercice
+                </h2>
+                <section class="scroll-container" id="mise-en-page">
+                   
+              
+                    <article class="post">
+                        <div class="post-content">
+                            <div class="row text-center">
+                                <div class="col-6">
+                                    <h3 class="post-title">Exercice Laravel</h3>
+        
+                                </div>
+                                <div class="col-6">
+                                    <button type="button" style="max-width: max-content" class="btn btn-block text-white btn-success">
+                                        Download
+                                        </button> 
+                                </div>
+                            </div>
+                                                
+                         </div>
+                   </article>
+              
+                   <article class="post">
+                    <div class="post-content">
+                        <div class="row text-center">
+                            <div class="col-6">
+                                <h3 class="post-title">Exercice Laravel</h3>
+    
+                            </div>
+                            <div class="col-6">
+                                <button type="button" style="max-width: max-content" class="btn btn-block text-white btn-success">
+                                    Download
+                                    </button> 
+                            </div>
+                        </div>
+                                            
+                     </div>
+               </article>
+              </section>
 
 
                 
