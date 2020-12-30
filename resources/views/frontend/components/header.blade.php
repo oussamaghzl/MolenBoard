@@ -23,7 +23,7 @@
 
             <div class="fancy-button__container mx-4">
               <div class="fancy-button__bg-box"></div>
-              <a href="{{ route("classe") }}" class="fancy-button btn btn-light">Forum</a>
+              <a href="/forum" class="fancy-button btn btn-light">Forum</a>
             </div> 
 
             <div class="fancy-button__container mx-4">

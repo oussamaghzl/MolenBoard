@@ -7,7 +7,7 @@
     <title>MolenBoard</title>
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
 </head>
-<body style="background:url(./img/back.png); background-size: cover;">
+<body style="background:url(./img/back.png); background-size: cover;" class="mx-auto">
     
     @include('frontend.components.header')
 

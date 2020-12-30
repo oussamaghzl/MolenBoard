@@ -240,11 +240,11 @@ return [
         ],
         [
             'text' => 'Profils',
-            'url' => 'profil',
+            'url' => 'profil-admin',
         ],
         [
             'text' => 'Classes',
-            'url' => 'classe/create',
+            'url' => 'classe-admin/create',
         ],
         [
             'text'        => 'pages',
