@@ -7,6 +7,9 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ClasseController;
+use App\Http\Controllers\ForumController;
+use App\Http\Controllers\ForumQuestionController;
+use App\Http\Controllers\ForumReponseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,21 +30,18 @@ Route::get('/home', [HomeController::class,'index'])->name('home');
 
 Route::resource('admin',RoleController::class);
 
-
 Auth::routes();
-
-
-
 
 Route::resource('/profil', UserController::class);
 Route::resource('/classe', ClasseController::class);
-
+Route::resource('/forum', ForumController::class);
+Route::resource('/forum-question', ForumQuestionController::class);
+Route::resource('/forum-reponse', ForumReponseController::class);
 
 // Publique 
 
 Route::get('/', [PublicController::class, 'index'])->name('accueil');
 Route::get('/classe', [PublicController::class, 'index2'])->name('classe');
-
 
 
 // Route::get('/forum', [PublicController::class, 'index3'])->name('forum');
