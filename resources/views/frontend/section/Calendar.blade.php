@@ -84,8 +84,8 @@
             </div>
         </div>
     
-        <div class="col-10 mt-4" >
-            <div class="bg-white text-dark" id='calendar'></div>
+        <div class="col-10 bg-dark my-4" >
+            <div class="mt-3 p-3 bg-white text-dark" id='calendar'></div>
             
         </div>
     </div>

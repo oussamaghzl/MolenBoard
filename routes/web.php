@@ -46,9 +46,9 @@ Route::get('/classe', [PublicController::class, 'index2'])->name('classe');
 Route::get('/eleves', [PublicController::class, 'index21'])->name('eleves');
 Route::get('/agenda', [PublicController::class, 'index22'])->name('agenda');
 Route::get('/exercice', [PublicController::class, 'index23'])->name('exercice');
-Route::resource('/forum', ForumController::class);
-Route::resource('/forum-question', ForumQuestionController::class);
-Route::resource('/forum-reponse', ForumReponseController::class);
+Route::resource('/forum', ForumController::class)->middleware('auth');
+Route::resource('/forum-question', ForumQuestionController::class)->middleware('auth');
+Route::resource('/forum-reponse', ForumReponseController::class)->middleware('auth');
 
 
 //contact

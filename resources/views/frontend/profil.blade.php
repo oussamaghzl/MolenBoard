@@ -14,17 +14,22 @@
           </a>
           
           <!-- the username -->
-          <h1>David Jones</h1>
+          <h1>{{Auth::user()->name}}</h1>
           
           <!-- and role or location -->
           <h2>Web Developer</h2>
+          <h2>{{Auth::user()->email}}</h2>
       
       </header>
     
       <!-- bit of a bio; who are you? -->
       <div class="profile-bio">
-      
-          <p>Role : </p>
+        
+        @foreach ($role as $item)
+            @if (Auth::user()->role_id == $item->id)
+                <p>Role : {{$item->name}}</p>
+            @endif
+        @endforeach
       
       </div>
     

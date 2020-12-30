@@ -2,11 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Role;
 use App\Models\User;
 use Illuminate\Http\Request;
 
 class PublicController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth')->except('index','index4');
+    }
     public function index()
     {
         return view('frontend.accueil');
@@ -17,8 +22,9 @@ class PublicController extends Controller
     }
     public function index21()
     {
-        $datas = User::all();
-        return view('frontend.section.Eleve');
+        $compteur = 1;
+        $eleve = User::all();
+        return view('frontend.section.Eleve',compact('eleve','compteur'));
     }
     public function index22()
     {
@@ -26,7 +32,8 @@ class PublicController extends Controller
     }
     public function index23()
     {
-        return view('frontend.section.Exercice');
+        $compteur = 1;
+        return view('frontend.section.Exercice',compact('compteur'));
     }
     public function index4()
     {
@@ -34,6 +41,7 @@ class PublicController extends Controller
     }
     public function index5()
     {
-        return view('frontend.profil');
+        $role = Role::all();
+        return view('frontend.profil',compact('role'));
     }
 }

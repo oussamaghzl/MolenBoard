@@ -7,7 +7,7 @@
 
 
 <div class="container w-50">
-    <table class="table text-center">
+    <table class="table text-left">
     <thead>
       <tr>
         <th scope="col">Réponse</th>

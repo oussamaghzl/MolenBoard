@@ -24,14 +24,14 @@
                     
                 @endif
             @else
-                <a style="padding: 25px 100px" href="{{ route('profil') }}">Profil</a>
+                <a style="padding: 25px 100px" href="{{ route('profil') }}">{{Auth::user()->name}}</a>
 
             @endguest
 
 
             </div>
         </div>
-        <h2>Plateforme fait par des étudiants pour<span> les étudiants.</span></h2>
+        <h2>Plateforme MolenGeek fait par des étudiants pour<span> les étudiants.</span></h2>
     </section>
 
 @endsection
