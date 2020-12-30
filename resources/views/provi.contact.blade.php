@@ -13,8 +13,6 @@
                     <div class="col-lg-6">
 
 
-
-
                         <div class="form">
 
                             <h4>Contactez-nous</h4>
