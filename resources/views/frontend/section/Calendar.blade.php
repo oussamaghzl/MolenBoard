@@ -1,7 +1,65 @@
-@extends('frontend.template')
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8' />
+<link href='css/main.css' rel='stylesheet' />
+<link rel="stylesheet" href="{{asset('css/app.css')}}">
+<script src='js/main.js'></script>
+<script src="{{asset('js/app.js')}}"></script>
+<script>
 
-@section('content')
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
 
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      headerToolbar: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'dayGridMonth,timeGridWeek,timeGridDay'
+      },
+      initialDate: '2020-12-30',
+      navLinks: true, // can click day/week names to navigate views
+      selectable: true,
+      selectMirror: true,
+      select: function(arg) {
+        var title = prompt('Evenement:');
+        if (title) {
+          calendar.addEvent({
+            title: title,
+            start: arg.start,
+            end: arg.end,
+            allDay: arg.allDay
+          })
+        }
+        calendar.unselect()
+      },
+      eventClick: function(arg) {
+        if (confirm("Veux-tu vraiment supprimer l'événement ?")) {
+          arg.event.remove()
+        }
+      },
+      editable: true,
+      dayMaxEvents: true, // allow "more" link when too many events
+      events: [
+      ]
+    });
+
+    calendar.render();
+  });
+
+</script>
+<style>
+
+
+  #calendar {
+    max-width: 60%;
+    margin: 0 auto;
+  }
+
+</style>
+</head>
+<body style="background:url(./img/back.png); background-size: cover;">
+    @include('frontend.components.header')
     <div class="row mx-0 pb-4" id="sectionClasse">
         <div class="col-2 text-center">
             <div class=" py-3">
@@ -10,13 +68,13 @@
                         <h3>Eleves</h3>
                     </div>
                 </a>
-
+    
                 <a style="text-decoration:none" href="{{ route("agenda") }}">
                     <div class="cardd cardd-1 mx-auto d-flex justify-content-center">
                         <h3 >Agenda</h3>
                     </div>
                 </a>
-
+    
                 <a style="text-decoration:none" href="{{ route("exercice") }}" >
                     <div class="cardd cardd-1 mx-auto d-flex justify-content-center">
                         <h3>Exercice</h3>
@@ -25,36 +83,15 @@
                         
             </div>
         </div>
-
+    
         <div class="col-10 mt-4" >
-          <h3 class="page-title">{{ trans('global.systemCalendar') }}</h3>
-          <div class="card">
-              <div class="card-header">
-                  {{ trans('global.systemCalendar') }}
-              </div>
-              <div class="card-body">
-                  <form action="{{ route('admin.systemCalendar') }}" method="GET">
-                      Venue:
-                      <select name="venue_id">
-                          <option value="">-- all venues --</option>
-                          @foreach($venues as $venue)
-                              <option value="{{ $venue->id }}"
-                                      @if (request('venue_id') == $venue->id) selected @endif>{{ $venue->name }}</option>
-                          @endforeach
-                      </select>
-                      <button type="submit" class="btn btn-sm btn-primary">Filter</button>
-                  </form>
-          
-                  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.1.0/fullcalendar.min.css' />
-          
-                  <div id='calendar'>
-                    
-                  </div>
-              </div>
-          </div>
+            <div class="bg-white text-dark" id='calendar'></div>
+            
         </div>
     </div>
-  
-@endsection
-          
+
+
+</body>
+</html>
+
     
