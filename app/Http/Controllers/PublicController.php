@@ -26,5 +26,9 @@ class PublicController extends Controller
     {
         return view('frontend.section.Exercice');
     }
+    public function index4()
+    {
+        return view('frontend.contact');
+    }
 
 }
