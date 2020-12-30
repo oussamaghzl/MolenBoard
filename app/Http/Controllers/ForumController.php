@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
-use App\Models\Classe;
+use App\Models\Forum;
 use Illuminate\Http\Request;
+use App\Models\ForumQuestion;
 
-class ClasseController extends Controller
+class ForumController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,8 @@ class ClasseController extends Controller
      */
     public function index()
     {
-        
+        $sujet = Forum::all();
+        return view('frontend.forum.forum', compact('sujet'));
     }
 
     /**
@@ -25,8 +26,7 @@ class ClasseController extends Controller
      */
     public function create()
     {
-        $datas = Classe::all();
-        return view('backend.classe-admin', compact('datas'));
+        //
     }
 
     /**
@@ -37,9 +37,9 @@ class ClasseController extends Controller
      */
     public function store(Request $request)
     {
-        $store = new Classe;
+        $store = new Forum;
 
-        $store->classe = $request->nom;
+        $store->sujet = $request->sujet;
 
         $store->save();
         return redirect()->back();
@@ -48,56 +48,47 @@ class ClasseController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Classe  $classe
+     * @param  \App\Models\Forum  $forum
      * @return \Illuminate\Http\Response
      */
-    public function show($classe)
+    public function show($id)
     {
-        $eleve = User::all();
-        $datas = Classe::find($classe);
-        return view('backend.classe-show', compact('datas', 'eleve'));
+        $question = ForumQuestion::all();
+        $sujet = Forum::find($id);
+        return view('frontend.forum.forum-question', compact('sujet', 'question'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Classe  $classe
+     * @param  \App\Models\Forum  $forum
      * @return \Illuminate\Http\Response
      */
-    public function edit($classe)
+    public function edit(Forum $forum)
     {
-        $datas = Classe::find($classe);
-        return view('backend.classe-edit-admin', compact('datas'));
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Classe  $classe
+     * @param  \App\Models\Forum  $forum
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request,$classe)
+    public function update(Request $request, Forum $forum)
     {
-        $update = Classe::find($classe);
-
-        $update->classe = $request->classe;
-
-        $update->save();
-        return redirect('/classe/create');
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Classe  $classe
+     * @param  \App\Models\Forum  $forum
      * @return \Illuminate\Http\Response
      */
-    public function destroy($classe)
+    public function destroy(Forum $forum)
     {
-        $destroy = Classe::find($classe);
-        $destroy->delete();
-
-        return redirect()->back();
+        //
     }
 }

@@ -244,7 +244,7 @@ return [
         ],
         [
             'text' => 'Classes',
-            'url' => 'classe',
+            'url' => 'classe/create',
         ],
         [
             'text'        => 'pages',

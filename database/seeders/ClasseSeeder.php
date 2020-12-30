@@ -15,7 +15,7 @@ class ClasseSeeder extends Seeder
     public function run()
     {
         DB::table('classes')->insert([
-            "classe"=> "Nouveau"
+            "classe"=> "Pas de classe"
         ]);
         DB::table('classes')->insert([
             "classe"=> "Coding school 13"

@@ -8,6 +8,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ClasseController;
 use App\Http\Controllers\MailController;
+use App\Http\Controllers\ForumController;
+use App\Http\Controllers\ForumQuestionController;
+use App\Http\Controllers\ForumReponseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +36,11 @@ Auth::routes();
 Route::resource('/profil-admin', UserController::class);
 Route::resource('/classe-admin', ClasseController::class);
 
+Route::resource('/profil', UserController::class);
+Route::resource('/classe', ClasseController::class);
+Route::resource('/forum', ForumController::class);
+Route::resource('/forum-question', ForumQuestionController::class);
+Route::resource('/forum-reponse', ForumReponseController::class);
 
 // Publique 
 
@@ -44,7 +52,6 @@ Route::get('/classe', [PublicController::class, 'index2'])->name('classe');
 Route::get('/eleves', [PublicController::class, 'index21'])->name('eleves');
 Route::get('/agenda', [PublicController::class, 'index22'])->name('agenda');
 Route::get('/exercice', [PublicController::class, 'index23'])->name('exercice');
-
 
 
 // Route::get('/forum', [PublicController::class, 'index3'])->name('forum');

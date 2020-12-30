@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class PublicController extends Controller
@@ -16,6 +17,7 @@ class PublicController extends Controller
     }
     public function index21()
     {
+        $datas = User::all();
         return view('frontend.section.Eleve');
     }
     public function index22()
