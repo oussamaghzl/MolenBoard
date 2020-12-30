@@ -7,12 +7,11 @@
     <title>MolenBoard</title>
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
 </head>
-<body>
+<body style="background:url(./img/back.png); background-size: cover;">
     
     @include('frontend.components.header')
 
     @yield('content')
-
 
     <script src="{{asset('js/app.js')}}"></script>
 </body>

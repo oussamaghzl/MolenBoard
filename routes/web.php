@@ -27,14 +27,10 @@ Route::get('/home', [HomeController::class,'index'])->name('home');
 
 Route::resource('admin',RoleController::class);
 
-
 Auth::routes();
 
-
-
-
-Route::resource('/profil', UserController::class);
-Route::resource('/classe', ClasseController::class);
+Route::resource('/profil-admin', UserController::class);
+Route::resource('/classe-admin', ClasseController::class);
 
 
 // Publique 
@@ -42,7 +38,13 @@ Route::resource('/classe', ClasseController::class);
 Route::get('/', [PublicController::class, 'index'])->name('accueil');
 Route::get('/classe', [PublicController::class, 'index2'])->name('classe');
 
+// Classe
+
+Route::get('/eleves', [PublicController::class, 'index21'])->name('eleves');
+Route::get('/agenda', [PublicController::class, 'index22'])->name('agenda');
+Route::get('/exercice', [PublicController::class, 'index23'])->name('exercice');
+
 
 
 // Route::get('/forum', [PublicController::class, 'index3'])->name('forum');
-// Route::get('/contact', [PublicController::class, 'index4'])->name('contact');
+Route::get('/contact', [PublicController::class, 'index4'])->name('contact');

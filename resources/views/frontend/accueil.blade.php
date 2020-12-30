@@ -1,7 +1,7 @@
 @extends('frontend.template')
 
 @section('content')
-    <section class="accueil" style="background:url(./img/back.png); background-size: cover;">
+    <section class="accueil" >
         <div class="container">
             <img class="img1" src="./img/molengeek.jpg" alt="">
             <img class="img2" src="./img/molenboard.png" alt="">

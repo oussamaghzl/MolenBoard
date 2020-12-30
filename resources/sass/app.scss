@@ -1,5 +1,6 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
+@import '~@fortawesome/fontawesome-free/css/all.css';
 
 // Variables
 @import 'variables';
@@ -10,8 +11,9 @@
 // style
 @import '_style.sass';
 
-//font awesome
-@import '~@fortawesome/fontawesome-free/css/all.css';
+@import '_classe.sass';
+
+@import '_classetitre.scss';
 
 //footer
 @import "_footer.scss";
