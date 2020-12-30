@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ClasseController;
+use App\Http\Controllers\MailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,4 +48,7 @@ Route::get('/exercice', [PublicController::class, 'index23'])->name('exercice');
 
 
 // Route::get('/forum', [PublicController::class, 'index3'])->name('forum');
+//contact
 Route::get('/contact', [PublicController::class, 'index4'])->name('contact');
+Route::post("/send-email", [MailController::class, "sendMail"]);
+
