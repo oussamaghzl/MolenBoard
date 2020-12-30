@@ -29,7 +29,7 @@
                     <li></li>
                     <li></li>
                     <ul>
-                    <h1 class="bg-none" id="titree">Bienvenue Oussama</h1>
+                    <h1 class="bg-none" id="titree">Bienvenue {{Auth::user()->name}}</h1>
         </div>
     </div>
 
