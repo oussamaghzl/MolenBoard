@@ -40,22 +40,8 @@
                     
                         <li class="nav-item dropdown no-arrow">
                             
-                                                            @guest
-                            @if (Route::has('login'))
-                                <a style="text-decoration:none" href="{{ route('login') }}" class="text-sm  underline">
-                                    <button type="button" class="btn btn-block text-white btn-info">
-                                        Login
-                                    </button>
-                                </a>
-                            @endif
-                            
-                            @if (Route::has('register'))
-                                <a style="text-decoration:none" href="{{ route('register') }}" class="ml-4 text-sm  underline">
-                                    <button type="button" class="btn btn-block text-white btn-success">
-                                    Register
-                                    </button>
-                                </a>
-                            @endif
+                        @guest
+                           
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
