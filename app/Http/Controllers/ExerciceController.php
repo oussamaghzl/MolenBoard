@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Exercice;
 use Illuminate\Http\Request;
-use App\Models\User;
-use App\Models\Role;
-use App\Models\Classe;
 
-class UserController extends Controller
+class ExerciceController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +14,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $datas = User::all();
-        return view('backend.profil', compact('datas'));
+        //
     }
 
     /**
@@ -44,10 +41,10 @@ class UserController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Exercice  $exercice
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Exercice $exercice)
     {
         //
     }
@@ -55,48 +52,34 @@ class UserController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Exercice  $exercice
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Exercice $exercice)
     {
-        $edit = User::find($id);
-        $role = Role::all();
-        $classe = Classe::all();
-        return view('backend.edit-profil', compact('edit', 'role', 'classe'));
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\Exercice  $exercice
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Exercice $exercice)
     {
-        $update = User::find($id);
-
-        $update->name = $request->name;
-        $update->email = $request->email;
-        $update->role_id = $request->role_id;
-        $update->classe_id = $request->classe_id;
-
-        $update->save();
-        return redirect('/profil-admin');
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\Exercice  $exercice
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Exercice $exercice)
     {
-        $destroy = User::find($id);
-        $destroy->delete();
-
-        return redirect()->back();
+        //
     }
 }

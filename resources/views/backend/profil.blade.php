@@ -22,12 +22,12 @@
                       <td>{{$elem->name}}</td>
                       <td>{{$elem->email}}</td>
                       <td>
-                        <a href="/profil/{{$elem->id}}/edit">
+                        <a href="/profil-admin/{{$elem->id}}/edit">
                             <button type="submit" class="btn btn-success">edit</button>
                         </a>
                       </td>
   
-                      <td><form action="/profil/{{$elem->id}}" method="post">
+                      <td><form action="/profil-admin/{{$elem->id}}" method="post">
                         @csrf
                         @method('delete')
                         <button type="submit" class="btn btn-danger">Delete</button>

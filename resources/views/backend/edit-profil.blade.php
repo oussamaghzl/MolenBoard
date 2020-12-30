@@ -4,7 +4,7 @@
 
 <div class="container w-75">
     <h1 class="text-center">Modifier les profils</h1>
-    <form action="/profil/{{$edit->id}}" method="post">
+    <form action="/profil-admin/{{$edit->id}}" method="post">
     @csrf
     @method('PUT')
         <table class="table">

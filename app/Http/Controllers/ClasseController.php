@@ -84,7 +84,7 @@ class ClasseController extends Controller
         $update->classe = $request->classe;
 
         $update->save();
-        return redirect('/classe/create');
+        return redirect('/classe-admin/create');
     }
 
     /**

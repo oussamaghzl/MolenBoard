@@ -6,7 +6,7 @@
 
 <div class="container d-flex align-items-center justify-content-center">
     <div>
-    <form action="/classe" method="post" class="m-5">
+    <form action="/classe-admin" method="post" class="m-5">
     @csrf
         
         <h3>Nom de la classe :</h3>
@@ -32,16 +32,16 @@
                     <th scope="row">{{$elem->id}}</th>
                           <td>{{$elem->classe}}</td>
                           <td>
-                            <a href="/classe/{{$elem->id}}">
+                            <a href="/classe-admin/{{$elem->id}}">
                               <button type="submit" class="btn btn-primary">Voir</button>
                           </a>
                         </td>
                           <td>
-                            <a href="/classe/{{$elem->id}}/edit">
+                            <a href="/classe-admin/{{$elem->id}}/edit">
                                 <button type="submit" class="btn btn-success">Editer</button>
                             </a>
                           </td>
-                          <td><form action="/classe/{{$elem->id}}" method="post">
+                          <td><form action="/classe-admin/{{$elem->id}}" method="post">
                             @csrf
                             @method('delete')
                             <button type="submit" class="btn btn-danger">Delete</button>
